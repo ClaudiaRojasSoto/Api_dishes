@@ -10,7 +10,8 @@ body {
   gap: 15px;
 }
 
-header {
+header,
+footer {
   background-color: rgb(245, 209, 109);
 }
 
@@ -24,4 +25,11 @@ li a {
   list-style: none;
   color: black;
   font-size: 15px;
+}
+
+footer {
+  font-size: 15px;
+  text-align: center;
+  justify-content: center;
+  height: 50px;
 }
