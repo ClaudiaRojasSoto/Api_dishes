@@ -1,6 +1,7 @@
 body {
   padding: 0;
   margin: 0;
+  background-color: rgb(161, 230, 230);
 }
 
 .dflex {
@@ -8,11 +9,16 @@ body {
   justify-content: space-around;
   align-items: center;
   gap: 15px;
+  flex-wrap: wrap;
 }
 
 header,
 footer {
   background-color: rgb(245, 209, 109);
+}
+
+main {
+  padding: 15px;
 }
 
 #logo {
@@ -32,4 +38,47 @@ footer {
   text-align: center;
   justify-content: center;
   height: 50px;
+}
+
+.mealimg {
+  width: 200px;
+}
+
+.mealtitle {
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+h2 {
+  color: brown;
+}
+
+.container,
+.item {
+  width: 300px;
+  height: 460px;
+  margin-bottom: 40px;
+}
+
+.item {
+  border: 3px solid brown;
+  flex-direction: column;
+  padding: 10px;
+  background-color: rgba(250, 232, 182, 0.705);
+}
+
+#likes {
+  background-color: transparent;
+  border: transparent;
+  font-size: 30px;
+  color: brown;
+}
+
+#comments {
+  background-color: rgb(245, 209, 109);
+  width: 100px;
+  height: 34px;
+  border-radius: 12px;
+  border: 3px solid brown;
 }
