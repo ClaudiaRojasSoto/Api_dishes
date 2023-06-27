@@ -1,10 +1,18 @@
 import showCommentsPopup from './commentsPopup.js';
 import handleFetchError from './errorHandler.js';
+import { getLikes } from './likes.js';
 
 const container = document.querySelector('main');
 
 const displayItems = (dataMeals) => {
-  dataMeals.forEach((meals) => {
+  dataMeals.forEach(async (meals) => {
+    const numberOfLikes = await getLikes();
+    let likes = 0;
+    numberOfLikes.forEach((elem) => {
+      if (elem.item_id === meals.idMeal) {
+        likes = elem.likes;
+      }
+    });
     const mainDiv = document.createElement('div');
     mainDiv.className = 'dflex container';
     mainDiv.innerHTML = `
@@ -13,7 +21,7 @@ const displayItems = (dataMeals) => {
       <div class="dflex mealtitle">
         <h2>${meals.strMeal}</h2>
         <div>
-          <span>0</span>
+          <span>${likes} likes</span>
           <button id="likes">&#9825;</button>
         </div>
       </div>
