@@ -82,3 +82,67 @@ h2 {
   border-radius: 12px;
   border: 3px solid brown;
 }
+
+#commentsPopup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 90vw;
+  height: 90vh;
+  max-height: 90vh;
+  overflow-y: auto;
+  background-color: rgb(250, 232, 182);
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  border: 3px solid brown;
+}
+
+#commentsPopup h2 {
+  margin-top: 10px;
+}
+
+#commentsPopup img {
+  width: 400px;
+  height: 300px;
+  object-fit: cover;
+}
+
+#details-instructions {
+  color: brown;
+  padding: 30px;
+}
+
+#commentsPopup h3 {
+  color: brown;
+  margin-bottom: 10px;
+}
+
+#nameInput {
+  margin-bottom: 10px;
+  width: 70%;
+  padding: 5px;
+  border: 1px solid brown;
+}
+
+#commentInput {
+  margin-bottom: 10px;
+  width: 70%;
+  padding: 5px;
+  height: 100px;
+  border: 1px solid brown;
+}
+
+#commentsPopup .closeButton {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 40px;
+  cursor: pointer;
+  color: brown;
+}
