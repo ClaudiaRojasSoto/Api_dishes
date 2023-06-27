@@ -1,3 +1,6 @@
+import showCommentsPopup from './commentsPopup.js';
+import handleFetchError from './errorHandler.js';
+
 const container = document.querySelector('main');
 
 const displayItems = (dataMeals) => {
@@ -17,6 +20,11 @@ const displayItems = (dataMeals) => {
         <button id="comments">Comments</button>
       </div>
     `;
+
+    mainDiv.querySelector('#comments').addEventListener('click', () => {
+      showCommentsPopup(meals.idMeal).catch(handleFetchError);
+    });
+
     container.appendChild(mainDiv);
   });
 };
