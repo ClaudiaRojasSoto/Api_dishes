@@ -1,6 +1,6 @@
 import showCommentsPopup from './commentsPopup.js';
 import handleFetchError from './errorHandler.js';
-import { getLikes } from './likes.js';
+import postLikes, { getLikes, updateText } from './likes.js';
 
 const container = document.querySelector('main');
 
@@ -21,8 +21,8 @@ const displayItems = (dataMeals) => {
       <div class="dflex mealtitle">
         <h2>${meals.strMeal}</h2>
         <div>
-          <span>${likes} likes</span>
-          <button id="likes">&#9825;</button>
+          <span class="${meals.idMeal}" id="likesNumber">${likes} likes</span>
+          <button class="${meals.idMeal}" id="likes">&#9825;</button>
         </div>
       </div>
         <button id="comments">Comments</button>
@@ -31,6 +31,13 @@ const displayItems = (dataMeals) => {
 
     mainDiv.querySelector('#comments').addEventListener('click', () => {
       showCommentsPopup(meals.idMeal).catch(handleFetchError);
+    });
+
+    mainDiv.querySelector('#likes').addEventListener('click', async (event) => {
+      const id = event.target.className;
+      await postLikes(id);
+      const updateLikes = mainDiv.querySelector('#likesNumber');
+      await updateText(meals.idMeal, updateLikes);
     });
 
     container.appendChild(mainDiv);
