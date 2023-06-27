@@ -18,4 +18,15 @@ export const getLikes = async () => {
   return dataLikes;
 };
 
+export const updateText = async (idmeal, span) => {
+  const numberOfLikes = await getLikes();
+  let likes = 0;
+  numberOfLikes.forEach((elem) => {
+    if (elem.item_id === idmeal) {
+      likes = elem.likes;
+    }
+  });
+  span.textContent = `${likes} likes`;
+};
+
 export default postLikes;
