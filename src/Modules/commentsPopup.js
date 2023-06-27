@@ -23,4 +23,3 @@ const showCommentsPopup = async (id) => {
 };
 
 export default showCommentsPopup;
-
