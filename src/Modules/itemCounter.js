@@ -1,6 +1,6 @@
 const homeItemCounter = (containerItems) => {
-  const home = document.querySelector('#home');
-  home.innerHTML += ` (${containerItems})`;
+  const hometitle = document.querySelector('#mainTitle');
+  hometitle.textContent = `${containerItems} Vegetarian Recipes`;
 };
 
 export default homeItemCounter;
