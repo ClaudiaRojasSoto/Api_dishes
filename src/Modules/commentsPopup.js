@@ -59,11 +59,20 @@ const showCommentsPopup = async (id) => {
 
   const form = popup.querySelector('#commentForm');
   form.addEventListener('submit', async (event) => {
+    const usernameInput = popup.querySelector('#nameInput');
+    const commentInput = popup.querySelector('#commentInput');
+
     event.preventDefault();
-    const username = popup.querySelector('#nameInput').value;
-    const comment = popup.querySelector('#commentInput').value;
+
+    const username = usernameInput.value;
+    const comment = commentInput.value;
+
     await sendComment(appId, id, username, comment);
     await updateComments(); // Update the comments (and the count) after submitting a comment
+
+    // Clear the input fields after the comment has been sent and comments have been updated
+    usernameInput.value = '';
+    commentInput.value = '';
   });
 
   popup.querySelector('.closeButton').addEventListener('click', () => {
