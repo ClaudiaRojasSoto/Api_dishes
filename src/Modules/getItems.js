@@ -1,6 +1,7 @@
 import showCommentsPopup from './commentsPopup.js';
 import handleFetchError from './errorHandler.js';
 import postLikes, { getLikes, updateText } from './likes.js';
+import homeItemCounter from './itemCounter.js';
 
 const container = document.querySelector('main');
 
@@ -48,6 +49,7 @@ const getItems = async () => {
   const request = await fetch('https://themealdb.com/api/json/v1/1/filter.php?c=Vegetarian');
   const data = await request.json();
   displayItems(data.meals);
+  homeItemCounter(data.meals.length);
 };
 
 export default getItems;
