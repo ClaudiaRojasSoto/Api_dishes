@@ -1,11 +1,6 @@
+# JavaScriptCapstone
+
 <a name="readme-top"></a>
-
-<div align="center">
-  <br/>
-
-  <h3><b>JavaScriptCapstone</b></h3>
-
-</div>
 
 # 📗 Table of Contents
 
@@ -28,7 +23,7 @@
   - [🙏 Acknowledgments ](#-acknowledgments-)
   - [📝 License ](#-license-)
 
-# 📖 [JavaScriptCapstone] <a name="about-project"></a>
+# 📖 JavaScriptCapstone <a name="about-project"></a>
 
 > This is the JavaScript Capstone project, where we built a web application based on an external API. The project is a webapp that revolves around a selected API, providing data about a topic of our choice.
 
@@ -36,45 +31,71 @@
 
 ### Tech Stack <a name="tech-stack"></a>
 
-> HTML
-> JS (Javascript)
-> CSS
-> WEBPACK
-> JEST
-
-
 <details>
-  <summary>Client</summary>
+  <summary>HTML</summary>
   <ul>
-    <li><a href="#">HTML</a></li>
+    <li>This project use <a href="https://github.com/microverseinc/curriculum-html-css/blob/main/html5.md">HTML.</a></li>
   </ul>
 </details>
 
 <details>
-  <summary>Server</summary>
+  <summary>CSS</summary>
   <ul>
+    <li>The <a href="https://github.com/microverseinc/curriculum-html-css/blob/main/html5.md">CSS</a> is used to provide the design in the whole page.</li>
   </ul>
 </details>
+
+<details>
+  <summary>Linters</summary>
+  <ul>
+    <li>The <a href="https://github.com/microverseinc/linters-config">Linters</a> are tools that help us to check and solve the errors in the code</li>
+    This project count with three linters: 
+    <ul>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+    </ul>
+  </ul>
+</details>
+
+<details>
+  <summary>Webpack</summary>
+  <ul>
+      <li>HTML Webpack Plugin</li>
+      <li>Webpack Style/CSS Loader</li>
+      <li>Local dev Server</li>
+    </ul>
+</details>
+
+<details>
+  <summary>API's</summary>
+  <ul>
+    <li>The <a href="https://www.themealdb.com/api.php">Themealdb API</a> is for obtain the food items.</li>
+    <li>The <a href="https://microverse.notion.site/Involvement-API-869e60b5ad104603aa6db59e08150270">Innvolvement API</a> is a Microverse API that allows the control of likes and comments.</li>
+  </ul>
+</details>
+<br>
 
 ### Key Features <a name="key-features"></a>
 
--   **[Webpack Configuration]**
--   **[HTML Generation]**
--   **[CSS Styling]**
--   **[Development Server]**
--   **[Code Quality]**
--   **[Modular Structure]**
--   **[ES6 Syntax]**
--   **[JavaScript Functionality]**
--   **[Gitflow]**
--   **[Send and receive data from API]**
--   **[Jest testing]**
+-   **Webpack Configuration**
+-   **HTML Generation**
+-   **CSS Styling**
+-   **Development Server**
+-   **Code Quality**
+-   **Modular Structure**
+-   **ES6 Syntax**
+-   **JavaScript Functionality**
+-   **itflow**
+-   **Send and receive data from API**
+-   **Jest testing**
+-   **API's**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-> You can see a Demo here: [Demo](https://.github.io/JavaScriptCapstone/dist/)
+> You can see a Demo here: [Demo](https:/andream2429/.github.io/JavaScriptCapstone/dist/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -88,7 +109,7 @@
 
 > -Clone this repository to your local machine using:
 
->  git clone https://github.com/ClaudiaRojasSoto/Leaderboard.git
+>  git clone https://github.com/andream2429/JavaScriptCapstone.git
 
 > -Navigate to the project folder:
 
@@ -115,7 +136,7 @@
 
 ### Setup
 
-> Clone this repository to your desired folder: https://github.com//JavaScriptCapstone.git
+> Clone this repository to your desired folder: https://github.com/andream2429/JavaScriptCapstone.git
 
 ### Install
 
@@ -131,10 +152,10 @@
 
 ## 👥 Authors <a name="authors"></a>
 
-👤 **Andrea**
+👤 **Andrea Manuel**
 
--   GitHub: [@githubhandle]()
--   LinkedIn: [LinkedIn]()
+- GitHub: [@AndreaM2429](https://github.com/AndreaM2429)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/andrea-manuel-2b075026a/)
 
 👤 **Claudia Rojas**
 
@@ -155,7 +176,7 @@
 
 > Contributions, issues, and feature requests are welcome!
 
-> Feel free to check the [issues page](https://github.com//JavaScriptCapstone/issues).
+> Feel free to check the [issues page](https://github.com/AndreaM2429/JavaScriptCapstone/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -179,6 +200,6 @@
 
 ## 📝 License <a name="license"></a>
 
-> This project is [MIT licensed](https://github.com///blob/dev/MIT.md).
+> This project is [MIT](./LICENSE).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
