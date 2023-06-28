@@ -1,6 +1,7 @@
 import getItemDetails from './getItemsDetails.js';
 import getComments from './getComments.js';
 import sendComment from './sendComment.js';
+import countComments from './commentsCounter.js';
 
 const showCommentsPopup = async (id) => {
   const details = await getItemDetails(id);
@@ -30,6 +31,13 @@ const showCommentsPopup = async (id) => {
 
   const commentsContainer = popup.querySelector('#commentsContainer');
 
+  // Create a new element to display the comment count
+  const commentsCountElement = document.createElement('p');
+  commentsCountElement.id = 'commentsCount';
+  commentsCountElement.classList.add('comments-count');
+
+  popup.insertBefore(commentsCountElement, commentsContainer);
+
   const updateComments = async () => {
     const comments = await getComments(appId, id);
     if (!Array.isArray(comments)) {
@@ -42,6 +50,8 @@ const showCommentsPopup = async (id) => {
         commentElement.classList.add('comment-text');
         commentsContainer.appendChild(commentElement);
       });
+      // Update the comments count after updating the comments
+      commentsCountElement.textContent = `Comments: ${countComments()}`;
     }
   };
 
@@ -49,11 +59,20 @@ const showCommentsPopup = async (id) => {
 
   const form = popup.querySelector('#commentForm');
   form.addEventListener('submit', async (event) => {
+    const usernameInput = popup.querySelector('#nameInput');
+    const commentInput = popup.querySelector('#commentInput');
+
     event.preventDefault();
-    const username = popup.querySelector('#nameInput').value;
-    const comment = popup.querySelector('#commentInput').value;
+
+    const username = usernameInput.value;
+    const comment = commentInput.value;
+
     await sendComment(appId, id, username, comment);
-    await updateComments();
+    await updateComments(); // Update the comments (and the count) after submitting a comment
+
+    // Clear the input fields after the comment has been sent and comments have been updated
+    usernameInput.value = '';
+    commentInput.value = '';
   });
 
   popup.querySelector('.closeButton').addEventListener('click', () => {
