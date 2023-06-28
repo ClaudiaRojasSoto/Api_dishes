@@ -29,8 +29,9 @@ ul,
 li a {
   text-decoration: none;
   list-style: none;
-  color: black;
-  font-size: 15px;
+  color: brown;
+  font-size: 18px;
+  font-weight: 700;
 }
 
 footer {
