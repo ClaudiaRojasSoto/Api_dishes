@@ -175,3 +175,9 @@ h2 {
   font-size: 15px;
   font-weight: bold;
 }
+
+#mainTitle {
+  color: brown;
+  font-size: 30px;
+  font-weight: 900;
+}
