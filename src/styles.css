@@ -151,3 +151,9 @@ h2 {
   cursor: pointer;
   color: brown;
 }
+
+#mainTitle {
+  color: brown;
+  font-size: 30px;
+  font-weight: 900;
+}
