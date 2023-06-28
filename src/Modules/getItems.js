@@ -17,12 +17,14 @@ const displayItems = (dataMeals) => {
           <button id="likes">&#9825;</button>
         </div>
       </div>
-        <button id="comments">Comments</button>
+        <button class="testing" id="comments">Comments</button>
       </div>
     `;
 
-    mainDiv.querySelector('#comments').addEventListener('click', () => {
-      showCommentsPopup(meals.idMeal).catch(handleFetchError);
+    mainDiv.querySelectorAll('#comments').forEach((commentsButton) => {
+      commentsButton.addEventListener('click', async () => {
+        await showCommentsPopup(meals.idMeal).catch(handleFetchError);
+      });
     });
 
     container.appendChild(mainDiv);
