@@ -95,7 +95,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-> You can see a Demo here: [Demo](https:/andream2429/.github.io/JavaScriptCapstone/dist/)
+> You can see a Demo here: [Demo](https://andream2429.github.io/JavaScriptCapstone/dist/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
