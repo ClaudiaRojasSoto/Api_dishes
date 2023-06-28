@@ -32,7 +32,7 @@ const showCommentsPopup = async (id) => {
 
   const updateComments = async () => {
     const comments = await getComments(app_id, id);
-    console.log(comments)
+    //console.log(comments)
     if(!Array.isArray(comments)){
     } else {
     commentsContainer.innerHTML = '';
