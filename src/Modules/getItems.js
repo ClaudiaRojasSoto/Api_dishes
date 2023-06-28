@@ -3,7 +3,7 @@ import handleFetchError from './errorHandler.js';
 import postLikes, { getLikes, updateText } from './likes.js';
 import homeItemCounter from './itemCounter.js';
 
-const container = document.querySelector('main');
+const container = document.querySelector('#itemsContainer');
 
 const displayItems = (dataMeals) => {
   dataMeals.forEach(async (meals) => {
