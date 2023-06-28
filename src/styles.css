@@ -75,6 +75,11 @@ h2 {
   color: brown;
 }
 
+#likes:active {
+  color: red;
+  font-weight: 900;
+}
+
 #comments {
   background-color: rgb(245, 209, 109);
   width: 100px;
