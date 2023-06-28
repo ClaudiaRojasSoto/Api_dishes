@@ -1,29 +1,65 @@
-import getItemDetails from './getItemsDetails.js';
+import getItemDetails from "./getItemsDetails.js";
+import getComments from "./getComments.js";
+import sendComment from "./sendComment.js";
 
 const showCommentsPopup = async (id) => {
   const details = await getItemDetails(id);
+  const app_id = "k513WvYOj4wUaRdaeuNF";
 
-  const popup = document.createElement('div');
-  popup.id = 'commentsPopup';
+  const popup = document.createElement("div");
+  popup.id = "commentsPopup";
   popup.innerHTML = `
   <h2>${details.strMeal}</h2>
   <img src="${details.strMealThumb}" alt="${details.strMeal}">
   <p id="details-instructions">${details.strInstructions}</p>
+  <div id="commentsContainer"></div>
   <h3>Add a comment</h3>
-  <form>
+  <form id="commentForm">
     <div>
       <input type="text" id="nameInput" placeholder="Your name">
     </div>
     <div>
       <textarea id="commentInput" placeholder="Your comment"></textarea>
     </div>
+    <button id="submitCommentButton">Comment</button>
   </form>
   <button class="closeButton">&times;</button>
 `;
 
   document.body.appendChild(popup);
 
-  popup.querySelector('.closeButton').addEventListener('click', () => {
+  const commentsContainer = popup.querySelector("#commentsContainer");
+
+  const updateComments = async () => {
+    const comments = await getComments(app_id, id);
+    console.log(comments)
+    if(!Array.isArray(comments)){
+    } else {
+    commentsContainer.innerHTML = '';
+    comments.forEach((comment) => {
+        
+      const commentElement = document.createElement("p");
+      commentElement.textContent = `${comment.creation_date} - ${comment.username}: ${comment.comment}`;
+      commentElement.classList.add("comment-text");
+      commentsContainer.appendChild(commentElement);
+    
+    });
+}
+  };
+
+  await updateComments();
+
+  const form = popup.querySelector("#commentForm");
+  form.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    const username = popup.querySelector("#nameInput").value;
+    const comment = popup.querySelector("#commentInput").value;
+    await sendComment(app_id, id, username, comment);
+    console.log(app_id)
+    await updateComments();
+  });
+
+  popup.querySelector(".closeButton").addEventListener("click", () => {
     document.body.removeChild(popup);
   });
 };
