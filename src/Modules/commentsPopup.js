@@ -30,7 +30,7 @@ const showCommentsPopup = async (id) => {
   document.body.appendChild(popup);
 
   const commentsContainer = popup.querySelector('#commentsContainer');
-  
+
   // Create a new element to display the comment count
   const commentsCountElement = document.createElement('p');
   commentsCountElement.id = 'commentsCount';
