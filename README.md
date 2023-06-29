@@ -27,6 +27,8 @@
 
 > This is the JavaScript Capstone project, where we built a web application based on an external API. The project is a webapp that revolves around a selected API, providing data about a topic of our choice.
 
+> [Here](https://youtu.be/Hi2MclqUOjU) you can see our video presentation of the project.
+
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
