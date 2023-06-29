@@ -4,12 +4,12 @@
 
 # 📗 Table of Contents
 
+- [JavaScriptCapstone](#javascriptcapstone)
 - [📗 Table of Contents](#-table-of-contents)
-- [📖 \[JavaScriptCapstone\] ](#-javascriptcapstone-)
+- [📖 JavaScriptCapstone ](#-javascriptcapstone-)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
-  - [🚀 Live Demo ](#-live-demo-)
   - [💻 Getting Started ](#-getting-started-)
     - [Project Structure](#project-structure)
     - [Setup](#setup)
@@ -26,6 +26,7 @@
 # 📖 JavaScriptCapstone <a name="about-project"></a>
 
 > This is the JavaScript Capstone project, where we built a web application based on an external API. The project is a webapp that revolves around a selected API, providing data about a topic of our choice.
+> [Here](https://youtu.be/Hi2MclqUOjU) is the link to the video presentation 
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -86,18 +87,13 @@
 -   **Modular Structure**
 -   **ES6 Syntax**
 -   **JavaScript Functionality**
--   **itflow**
+-   **Gitflow**
 -   **Send and receive data from API**
 -   **Jest testing**
 -   **API's**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## 🚀 Live Demo <a name="live-demo"></a>
-
-> You can see a Demo here: [Demo](https://andream2429.github.io/JavaScriptCapstone/dist/)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
